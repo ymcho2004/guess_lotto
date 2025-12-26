@@ -11,7 +11,7 @@ function App() {
     setLoading(true);
     try {
       // 우리가 만든 FastAPI 서버 주소
-      const response = await axios.get('http://127.0.0.1:8000/predict?count=5');
+      const response = await axios.get('https://guess-lotto.onrender.com/predict?count=5');
       setLottoSets(response.data.predictions); // 받아온 데이터 저장
     } catch (error) {
       console.error("에러 났어요 ㅠㅠ", error);
