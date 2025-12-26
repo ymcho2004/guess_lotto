@@ -29,6 +29,13 @@ origins = [
     "http://localhost:5173", # 리액트 개발 서버 주소
     "http://127.0.0.1:5173",
 ]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # "*"는 "모든 곳에서 오는 요청을 허용한다"는 뜻이야!
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 app.add_middleware(
     CORSMiddleware,
